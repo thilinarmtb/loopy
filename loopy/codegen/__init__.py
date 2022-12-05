@@ -375,6 +375,7 @@ def generate_code_for_a_single_kernel(kernel, callables_table, target,
     for var in kernel.args + list(kernel.temporary_variables.values()):
         if var.dtype.involves_complex():
             allow_complex = True
+            break
 
     # }}}
 
